@@ -29,15 +29,16 @@ public class Zuoye extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		response.setCharacterEncoding("utf-8");
 		
-	    //getServletConfig()·½·¨·µ»ØÒ»¸öServletConfig¶ÔÏó,¸Ã¶ÔÏóÖĞ°üº¬servletÆô¶¯ÅäÖÃĞÅÏ¢
-		ServletConfig config=this.getServletConfig();//ÄÃµ½init·½·¨ÖĞµÄServletConfig¶ÔÏó
+	    //getServletConfig()æ–¹æ³•è¿”å›ä¸€ä¸ªServletConfigå¯¹è±¡,è¯¥å¯¹è±¡ä¸­åŒ…å«servletå¯åŠ¨é…ç½®ä¿¡æ¯
+		ServletConfig config=this.getServletConfig();//æ‹¿åˆ°initæ–¹æ³•ä¸­çš„ServletConfigå¯¹è±¡
 		//String str=config.getInitParameter("food4");
 		  Enumeration<String> str1=config.getInitParameterNames();
 		   while(str1.hasMoreElements()){
 			   String name=str1.nextElement();
 			   String values=config.getInitParameter(name);
-			   PrintWriter out =response .getWriter();//´òÓ¡Á÷
-			    out.println("ÎÒÏë³Ô£º"+values);
+			   PrintWriter out =response .getWriter();//æ‰“å°æµ
+			    out.println("æˆ‘æƒ³åƒï¼š"+values);
+			    out.println("åˆ˜å¿ å›­aaaaaaaaaaaaaaaaaa");
 		   }
 			   
 	   
